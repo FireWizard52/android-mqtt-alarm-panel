@@ -117,13 +117,14 @@ Alarm panel subscribes to MQTT state changes published from the remote alarm sys
 | `disarmed`                 | The alarm is disabled/off.                                                               |
 | `arming`                   | The alarm is arming.<br>The alarm will be armed after the delay.                         |
 | `armed_home`               | The alarm is armed in home mode.                                                         |
+| `armed_away`               | The alarm is armed in away mode.                                                         |
 | `armed_night`              | The alarm is armed in night mode.                                                        |
 | `armed_custom_bypass`      | The alarm is armed in custom mode.                                                       |
 | `pending`                  | The alarm is pending.<br>The alarm will be triggered after the delay.                    |
 | `triggered`                | The alarm is triggered.                                                                  |
 
 
-* Note not all states are supported by the HA Manual MQTT component and would need to manually handled.  Sending additional states is optional and the alarm panel will function without the additional states `arm_away, arm_home, arm_night, arm_custom_bypass`.  
+* Note: not all states are supported by the HA Manual MQTT component and would need to manually handled.  Sending additional states is optional and the alarm panel will function without the additional states `armed_away, armed_home, armed_night, armed_custom_bypass`.  
 
 
 #### Supported Commands and Command Topic:
@@ -217,7 +218,7 @@ The payload contains extra information about the alarm command, in this example 
 
 Under the settings, you can update the default security code, it is 1234 on first instalation. The security code is used to access the alarm settings and disarm the alarm from the alarm control panel application. You can choose to use the security code to disarm or arm the system. The security code is not sent over MQTT, it is only used from the application to control the alarm.   
 
-There is an option called `Remote Code` that will send both the alarm state and the code entered when arming or optionally disarming the alarm to your MQTT broker.  The payload will be sent as JSON.  This requires extra work on your part to parse the code and command payload from the JSON payload using your available platform tools. Here is an example JSON payload of an alarm command with the code:
+There is an option called `Remote Code` that will send both the alarm state and the code entered when disarming or optionally arming the alarm to your MQTT broker.  The payload will be sent as JSON.  This requires extra work on your part to parse the code and command payload from the JSON payload using your available platform tools. Here is an example JSON payload of an alarm command with the code:
 
 ```
 {
@@ -448,7 +449,7 @@ magneticField | unit, value | ```{"unit":"uT", "value":"-1780.699951171875"}``` 
 pressure | unit, value | ```{"unit":"hPa", "value":"1011.584716796875"}``` |
 temperature | unit, value | ```{"unit":"°C", "value":"24"}``` |
 
-*NOTE:* Sensor values are device specific. Not all devices will publish all sensor values.
+*Note:* Sensor values are device specific. Not all devices will publish all sensor values.
 
 * Sensor values are constructued as JSON per the above table
 * For MQTT
