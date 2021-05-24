@@ -17,6 +17,7 @@
 <resources>
     <string name="app_name">Alarm Panel</string>
 
+  
     <!-- Menus -->
     <string name="action_settings">Instellingen</string>
     <string name="action_publish">Publiceren</string>
@@ -98,12 +99,12 @@
     <string name="preference_summary_image_rotation">Tijd in minuten tussen het wisselen van afbeeldingen. Momenteel %1$s.</string>
 
     <string name="preference_title_web_settings">HASS</string>
-    <string name="preference_summary_web_settings">Laat je een externe web pagina laden om je domotica platform weer te geven.</string>
+    <string name="preference_summary_web_settings">Je kunt meerdere web pagina\'s laden, die getoond worden als je van rechts naar links veegt op het hoofdscherm. Elke URL van het scherm wordt weergegeven als webpagina.</string>
     <string name="preference_title_web">Domotica pagina</string>
-    <string name="preference_summary_web">Geeft je domotica platform weer door te swipen op het startscherm.</string>
+    <string name="preference_summary_web">Geeft je domotica platform weer door op het startscherm te vegen.</string>
     <string name="preference_title_web_url">Platform adres</string>
-    <string name="preference_summary_web_url">Vul het IP-adres van je domotica web pagina in met het voorvoegsel en achtervoegsel als dat nodig is (voorbeeld: http://ipaddress:8123).</string>
-    <string name="preference_web_description">Dit is een experimentele functie. De weg pagina wordt geladen met Android\'s versie van de Chrome browser en geeft mogelijk de pagina anders weer, afhankelijk van je Android versie.</string>
+    <string name="preference_summary_web_url">Vul het IP adres van je domotica web pagina in met het voorvoegsel en de poort als dat nodig is. (voorbeeld: http://ipaddress:8123).</string>
+    <string name="preference_web_description">Dit is een experimentele functie. De web pagina wordt geladen met Android\'s versie van de Chrome browser en geeft mogelijk de pagina anders weer, afhankelijk van je Android SDK en WebView versies.</string>
 
     <string name="preference_title_notification">Notificaties</string>
     <string name="preference_summary_notification">Geeft een notificatie weer als een alarm geactiveerd is.</string>
@@ -114,20 +115,20 @@
 
 
     <string name="preference_title_notifications">Notificaties</string>
-    <string name="preference_title_mqtt_notifications">MQTT notificaties</string>
+    <string name="preference_title_mqtt_notifications">MQTT Notificaties</string>
     <string name="preference_summary_mqtt_notifications">Toon of spreek notificaties van MQTT berichten.</string>
 
     <string name="preference_title_alert">Alert notificaties</string>
     <string name="preference_title_system_notifications">Systeem notificaties</string>
-    <string name="preference_summary_alert">Gebruikt een alert melding om de inhoud van een notificatie te tonen: \n\n"{\"topic\":\"alarmpanel/command\", \"payload\":\"{\"alert\":\"Hallo!\"}\"}"</string>
+    <string name="preference_summary_alert">Voorbeeld formaat van het onderwerp en inhoud van het bericht om het alert bericht te tonen: \n\n"{\"topic\":\"alarmpanel/command\", \"payload\":\"{\"alert\":\"Hallo!\"}\"}"</string>
 
-    <string name="preference_tts_voice">TTS stem</string>
+    <string name="preference_tts_voice">TTS spraak</string>
     <string name="preference_tts">TTS notificaties</string>
-    <string name="preference_summary_tts">Gebruik een Google Text-To-Speech om de status van een alarm of een MQTT bericht uit te spreken. (Let op: Werkt alleen op Android Lollipop of hoger.)</string>
+    <string name="preference_summary_tts">Gebruik een Google Text-To-Speech om de inhoud van een MQTT bericht uit te spreken. (Let op: Werkt alleen op Android Lollipop of hoger.)</string>
 
     <string name="preference_tts_topic">TTS onderwerp</string>
-    <string name="preference_topic_title">Zet onderwerp waarde</string>
-    <string name="preference_tts_topic_summary">Voorbeeld formaat van het bericht onderwerp van notifcatie en alarm status die uitgesproken moeten worden: \n\n"{\"topic\":\"alarmpanel/command\", \"payload\":\"{\"speak\":\"Hallo!\"}\"}"</string>
+    <string name="preference_topic_title">Stel onderwerp in</string>
+    <string name="preference_tts_topic_summary">Voorbeeld formaat van het onderwerp en inhoud van het bericht dat uitgesproken moeten worden: \n\n"{\"topic\":\"alarmpanel/command\", \"payload\":\"{\"speak\":\"Hallo!\"}\"}"</string>
 
 
     <string name="preference_camera">Camera</string>
